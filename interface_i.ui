@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>454</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>454</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>300</width>
+    <height>454</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>E-MA © 2018 EMA </string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.1 rgba(65, 65, 65, 255), stop:0.1 rgba(65, 65, 65, 255));
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1" alignment="Qt::AlignRight">
+     <widget class="QToolButton" name="toolButton">
+      <property name="minimumSize">
+       <size>
+        <width>24</width>
+        <height>18</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>24</width>
+        <height>18</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(100, 100, 100);</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="PyDMPushButton" name="PyDMPushButton_ligthsystem">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string>
+    Basic PushButton to send a fixed value.
+
+    The PyDMPushButton is meant to hold a specific value, and send that value
+    to a channel when it is clicked, much like the MessageButton does in EDM.
+    The PyDMPushButton works in two different modes of operation, first, a
+    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
+    button is clicked a signal containing this value will be sent to the
+    connected channel. This is the default behavior of the button. However, if
+    the :attr:`.relativeChange` is set to True, the fixed value will be added
+    to the current value of the channel. This means that the button will
+    increment a channel by a fixed amount with every click, a consistent
+    relative move
+
+    Parameters
+    ----------
+    parent : QObject, optional
+        Parent of PyDMPushButton
+
+    label : str, optional
+        String to place on button
+
+    icon : QIcon, optional
+        An Icon to display on the PyDMPushButton
+
+    pressValue : int, float, str
+        Value to be sent when the button is clicked
+
+    relative : bool, optional
+        Choice to have the button perform a relative put, instead of always
+        setting to an absolute value
+
+    init_channel : str, optional
+        ID of channel to manipulate
+
+    </string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Open</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="2">
+     <widget class="PyDMImageView" name="PyDMImageView_inicial">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string>
+    A PyQtGraph ImageView with support for Channels and more from PyDM
+
+    Parameters
+    ----------
+    parent : QWidget
+        The parent widget for the Label
+    image_channel : str, optional
+        The channel to be used by the widget for the image data.
+    width_channel : str, optional
+        The channel to be used by the widget to receive the image width
+        information
+    </string>
+      </property>
+      <property name="alarmSensitiveBorder" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="colorMap" stdset="0">
+       <enum>PyDMImageView::Monochrome</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="PyDMCheckbox" name="PyDMCheckbox_singlecrystal">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string>
+    A QCheckbox with support for Channels and more from PyDM
+
+    Parameters
+    ----------
+    parent : QWidget
+        The parent widget for the Label
+    init_channel : str, optional
+        The channel to be used by the widget.
+
+    </string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(240, 240, 240);</string>
+      </property>
+      <property name="text">
+       <string>Single Crystal System</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="PyDMPushButton" name="PyDMPushButton_singlecrystal">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string>
+    Basic PushButton to send a fixed value.
+
+    The PyDMPushButton is meant to hold a specific value, and send that value
+    to a channel when it is clicked, much like the MessageButton does in EDM.
+    The PyDMPushButton works in two different modes of operation, first, a
+    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
+    button is clicked a signal containing this value will be sent to the
+    connected channel. This is the default behavior of the button. However, if
+    the :attr:`.relativeChange` is set to True, the fixed value will be added
+    to the current value of the channel. This means that the button will
+    increment a channel by a fixed amount with every click, a consistent
+    relative move
+
+    Parameters
+    ----------
+    parent : QObject, optional
+        Parent of PyDMPushButton
+
+    label : str, optional
+        String to place on button
+
+    icon : QIcon, optional
+        An Icon to display on the PyDMPushButton
+
+    pressValue : int, float, str
+        Value to be sent when the button is clicked
+
+    relative : bool, optional
+        Choice to have the button perform a relative put, instead of always
+        setting to an absolute value
+
+    init_channel : str, optional
+        ID of channel to manipulate
+
+    </string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Open</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="PyDMCheckbox" name="PyDMCheckbox_lightsource">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string>
+    A QCheckbox with support for Channels and more from PyDM
+
+    Parameters
+    ----------
+    parent : QWidget
+        The parent widget for the Label
+    init_channel : str, optional
+        The channel to be used by the widget.
+
+    </string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(240, 240, 240);</string>
+      </property>
+      <property name="text">
+       <string>Light Source System</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="PyDMCheckbox" name="PyDMCheckbox_temperature">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string>
+    A QCheckbox with support for Channels and more from PyDM
+
+    Parameters
+    ----------
+    parent : QWidget
+        The parent widget for the Label
+    init_channel : str, optional
+        The channel to be used by the widget.
+
+    </string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(240, 240, 240);</string>
+      </property>
+      <property name="text">
+       <string>Temperature System</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="PyDMPushButton" name="PyDMPushButton_temperaturesystem">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string>
+    Basic PushButton to send a fixed value.
+
+    The PyDMPushButton is meant to hold a specific value, and send that value
+    to a channel when it is clicked, much like the MessageButton does in EDM.
+    The PyDMPushButton works in two different modes of operation, first, a
+    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
+    button is clicked a signal containing this value will be sent to the
+    connected channel. This is the default behavior of the button. However, if
+    the :attr:`.relativeChange` is set to True, the fixed value will be added
+    to the current value of the channel. This means that the button will
+    increment a channel by a fixed amount with every click, a consistent
+    relative move
+
+    Parameters
+    ----------
+    parent : QObject, optional
+        Parent of PyDMPushButton
+
+    label : str, optional
+        String to place on button
+
+    icon : QIcon, optional
+        An Icon to display on the PyDMPushButton
+
+    pressValue : int, float, str
+        Value to be sent when the button is clicked
+
+    relative : bool, optional
+        Choice to have the button perform a relative put, instead of always
+        setting to an absolute value
+
+    init_channel : str, optional
+        ID of channel to manipulate
+
+    </string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Open</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="PyDMCheckbox" name="PyDMCheckbox_pressure">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string>
+    A QCheckbox with support for Channels and more from PyDM
+
+    Parameters
+    ----------
+    parent : QWidget
+        The parent widget for the Label
+    init_channel : str, optional
+        The channel to be used by the widget.
+
+    </string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(240, 240, 240);</string>
+      </property>
+      <property name="text">
+       <string>Pressure System</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="PyDMPushButton" name="PyDMPushButton_pressuresystem">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string>
+    Basic PushButton to send a fixed value.
+
+    The PyDMPushButton is meant to hold a specific value, and send that value
+    to a channel when it is clicked, much like the MessageButton does in EDM.
+    The PyDMPushButton works in two different modes of operation, first, a
+    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
+    button is clicked a signal containing this value will be sent to the
+    connected channel. This is the default behavior of the button. However, if
+    the :attr:`.relativeChange` is set to True, the fixed value will be added
+    to the current value of the channel. This means that the button will
+    increment a channel by a fixed amount with every click, a consistent
+    relative move
+
+    Parameters
+    ----------
+    parent : QObject, optional
+        Parent of PyDMPushButton
+
+    label : str, optional
+        String to place on button
+
+    icon : QIcon, optional
+        An Icon to display on the PyDMPushButton
+
+    pressValue : int, float, str
+        Value to be sent when the button is clicked
+
+    relative : bool, optional
+        Choice to have the button perform a relative put, instead of always
+        setting to an absolute value
+
+    init_channel : str, optional
+        ID of channel to manipulate
+
+    </string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Open</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="PyDMCheckbox" name="PyDMCheckbox_visionsystem">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string>
+    A QCheckbox with support for Channels and more from PyDM
+
+    Parameters
+    ----------
+    parent : QWidget
+        The parent widget for the Label
+    init_channel : str, optional
+        The channel to be used by the widget.
+
+    </string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(240, 240, 240);</string>
+      </property>
+      <property name="text">
+       <string>Diffraction Imaging System</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="PyDMPushButton" name="PyDMPushButton_visionsystem">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string>
+    Basic PushButton to send a fixed value.
+
+    The PyDMPushButton is meant to hold a specific value, and send that value
+    to a channel when it is clicked, much like the MessageButton does in EDM.
+    The PyDMPushButton works in two different modes of operation, first, a
+    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
+    button is clicked a signal containing this value will be sent to the
+    connected channel. This is the default behavior of the button. However, if
+    the :attr:`.relativeChange` is set to True, the fixed value will be added
+    to the current value of the channel. This means that the button will
+    increment a channel by a fixed amount with every click, a consistent
+    relative move
+
+    Parameters
+    ----------
+    parent : QObject, optional
+        Parent of PyDMPushButton
+
+    label : str, optional
+        String to place on button
+
+    icon : QIcon, optional
+        An Icon to display on the PyDMPushButton
+
+    pressValue : int, float, str
+        Value to be sent when the button is clicked
+
+    relative : bool, optional
+        Choice to have the button perform a relative put, instead of always
+        setting to an absolute value
+
+    init_channel : str, optional
+        ID of channel to manipulate
+
+    </string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Open</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="PyDMPushButton" name="PyDMPushButton_beamsystem">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string>
+    Basic PushButton to send a fixed value.
+
+    The PyDMPushButton is meant to hold a specific value, and send that value
+    to a channel when it is clicked, much like the MessageButton does in EDM.
+    The PyDMPushButton works in two different modes of operation, first, a
+    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
+    button is clicked a signal containing this value will be sent to the
+    connected channel. This is the default behavior of the button. However, if
+    the :attr:`.relativeChange` is set to True, the fixed value will be added
+    to the current value of the channel. This means that the button will
+    increment a channel by a fixed amount with every click, a consistent
+    relative move
+
+    Parameters
+    ----------
+    parent : QObject, optional
+        Parent of PyDMPushButton
+
+    label : str, optional
+        String to place on button
+
+    icon : QIcon, optional
+        An Icon to display on the PyDMPushButton
+
+    pressValue : int, float, str
+        Value to be sent when the button is clicked
+
+    relative : bool, optional
+        Choice to have the button perform a relative put, instead of always
+        setting to an absolute value
+
+    init_channel : str, optional
+        ID of channel to manipulate
+
+    </string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Open</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="PyDMCheckbox" name="PyDMCheckbox_beamalignment">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string>
+    A QCheckbox with support for Channels and more from PyDM
+
+    Parameters
+    ----------
+    parent : QWidget
+        The parent widget for the Label
+    init_channel : str, optional
+        The channel to be used by the widget.
+
+    </string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(240, 240, 240);
+</string>
+      </property>
+      <property name="text">
+       <string>Beam Alignment System</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(240, 240, 240);</string>
+      </property>
+      <property name="text">
+       <string>Experiment Management App</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+   <zorder>PyDMPushButton_pressuresystem</zorder>
+   <zorder>PyDMPushButton_visionsystem</zorder>
+   <zorder>PyDMPushButton_beamsystem</zorder>
+   <zorder>PyDMPushButton_ligthsystem</zorder>
+   <zorder>PyDMImageView_inicial</zorder>
+   <zorder>PyDMPushButton_singlecrystal</zorder>
+   <zorder>PyDMPushButton_temperaturesystem</zorder>
+   <zorder>PyDMCheckbox_beamalignment</zorder>
+   <zorder>PyDMCheckbox_lightsource</zorder>
+   <zorder>PyDMCheckbox_pressure</zorder>
+   <zorder>PyDMCheckbox_singlecrystal</zorder>
+   <zorder>PyDMCheckbox_temperature</zorder>
+   <zorder>PyDMCheckbox_visionsystem</zorder>
+   <zorder>toolButton</zorder>
+   <zorder>label</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">color: rgb(208, 208, 208);</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMPushButton</class>
+   <extends>QPushButton</extends>
+   <header>pydm.widgets.pushbutton</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMCheckbox</class>
+   <extends>QCheckBox</extends>
+   <header>pydm.widgets.checkbox</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMImageView</class>
+   <extends>QWidget</extends>
+   <header>pydm.widgets.image</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
