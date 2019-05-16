@@ -822,7 +822,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.117
          <x>0</x>
          <y>0</y>
          <width>501</width>
-         <height>132</height>
+         <height>134</height>
         </rect>
        </property>
        <attribute name="label">
@@ -1413,7 +1413,7 @@ background-color: rgb(70, 70, 70);
          <x>0</x>
          <y>0</y>
          <width>501</width>
-         <height>132</height>
+         <height>134</height>
         </rect>
        </property>
        <attribute name="label">
@@ -4235,7 +4235,7 @@ color: rgb(255, 0, 0);</string>
      <x>0</x>
      <y>0</y>
      <width>1026</width>
-     <height>20</height>
+     <height>19</height>
     </rect>
    </property>
   </widget>
@@ -4256,14 +4256,25 @@ color: rgb(255, 0, 0);</string>
  </widget>
  <customwidgets>
   <customwidget>
+   <class>PyDMLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>pydm.widgets.line_edit</header>
+  </customwidget>
+  <customwidget>
    <class>PyDMLabel</class>
    <extends>QLabel</extends>
    <header>pydm.widgets.label</header>
   </customwidget>
   <customwidget>
-   <class>PyDMPushButton</class>
-   <extends>QPushButton</extends>
-   <header>pydm.widgets.pushbutton</header>
+   <class>PyDMWaveformPlot</class>
+   <extends>QGraphicsView</extends>
+   <header>pydm.widgets.waveformplot</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMEnumComboBox</class>
+   <extends>QComboBox</extends>
+   <header>pydm.widgets.enum_combo_box</header>
+   <container>1</container>
   </customwidget>
   <customwidget>
    <class>PyDMCheckbox</class>
@@ -4276,25 +4287,14 @@ color: rgb(255, 0, 0);</string>
    <header>pydm.widgets.drawing</header>
   </customwidget>
   <customwidget>
-   <class>PyDMWaveformPlot</class>
-   <extends>QGraphicsView</extends>
-   <header>pydm.widgets.waveformplot</header>
-  </customwidget>
-  <customwidget>
-   <class>PyDMLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>pydm.widgets.line_edit</header>
+   <class>PyDMPushButton</class>
+   <extends>QPushButton</extends>
+   <header>pydm.widgets.pushbutton</header>
   </customwidget>
   <customwidget>
    <class>PyDMDrawingCircle</class>
    <extends>QWidget</extends>
    <header>pydm.widgets.drawing</header>
-  </customwidget>
-  <customwidget>
-   <class>PyDMEnumComboBox</class>
-   <extends>QComboBox</extends>
-   <header>pydm.widgets.enum_combo_box</header>
-   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources/>

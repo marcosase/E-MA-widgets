@@ -514,13 +514,18 @@ color: rgb(240, 240,240);
      <x>0</x>
      <y>0</y>
      <width>380</width>
-     <height>20</height>
+     <height>19</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>PyDMSpinbox</class>
+   <extends>QDoubleSpinBox</extends>
+   <header>pydm.widgets.spinbox</header>
+  </customwidget>
   <customwidget>
    <class>PyDMPushButton</class>
    <extends>QPushButton</extends>
@@ -530,11 +535,6 @@ color: rgb(240, 240,240);
    <class>PyDMCheckbox</class>
    <extends>QCheckBox</extends>
    <header>pydm.widgets.checkbox</header>
-  </customwidget>
-  <customwidget>
-   <class>PyDMSpinbox</class>
-   <extends>QDoubleSpinBox</extends>
-   <header>pydm.widgets.spinbox</header>
   </customwidget>
   <customwidget>
    <class>QMotor</class>
