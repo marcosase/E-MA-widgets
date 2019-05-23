@@ -1,3 +1,4 @@
+#PyDM 1.3.0
 pyuic5 -x name0.ui -o name1.py
 
 interface_marccd_2.ui -> interface_ccd_marccd.py
