@@ -464,7 +464,7 @@ class Ui_Ui_MainWindow_Ocean(object):
         self.gridLayout_4.addLayout(self.horizontalLayout_7, 2, 1, 1, 3)
         self.toolBox.addItem(self.page, "")
         self.page_2 = QtWidgets.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 98, 28))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 501, 132))
         self.page_2.setObjectName("page_2")
         self.PyDMPushButton_stop = PyDMPushButton(self.page_2)
         self.PyDMPushButton_stop.setGeometry(QtCore.QRect(260, 90, 95, 23))
